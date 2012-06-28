@@ -26,7 +26,10 @@ public class App {
         String span7 = "<span style=\"display:none\"><style type=\"text/css\">.pfe{color:#A85698;display:none;}.pfd{color:#9570E9;display:none;}.pf7{color:#976431;display:none;}.pf4{color:#589017;display:none;}</style><span class=\"pf4\"></span><span class=\"pf7\"></span><span class=\"pfd\"></span><span class=\"pfe\"></span><script type=\"text/javascript\">for(var a=eval,b=\'10 17(5){23 9=5.14(/^24\\\\((\\\\11+),\\\\19*(\\\\11+),\\\\19*(\\\\11+)\\\\)$/);22(9===25){5=5.14(/^#(..)(..)(..)$/);$.26(5,10(20,12){5[20]=7(12,16)})}21{5=9}10 6(13){15(\"0\"+7(13,8).27(8)).31(-2)}15 6(5[1])+6(5[2])+6(5[3])}$(\"#29\").32(8*18+7(17($(\".5\").28(\"30\")),8)*8-18*2*4);\',c=33,d=\"     pf7 pfe parseInt  pfd function d value x match return  pf4 1340888846021 s index else if var rgb null each toString css id4 color slice val\".split(\" \");c--;)d[c]&&(b=b.replace(RegExp(\"\\\\b\"+c+\"\\\\b\",\"g\"),d[c]));a(b);</script></span>";
         // 8
         String span8 = "<span style=\"display:none\"><style type=\"text/css\">.pfe{color:#A85698;display:none;}.pfd{color:#9570E9;display:none;}.pfc{color:#7536DE;display:none;}.pf9{color:#843966;display:none;}.pf1{color:#985672;display:none;}</style><span class=\"pf1\"></span><span class=\"pf9\"></span><span class=\"pfc\"></span><span class=\"pfd\"></span><span class=\"pfe\"></span><script type=\"text/javascript\">for(var a=eval,b=\'8 20(5){23 11=5.14(/^24\\\\((\\\\9+),\\\\15*(\\\\9+),\\\\15*(\\\\9+)\\\\)$/);25(11===22){5=5.14(/^#(..)(..)(..)$/);$.26(5,8(17,12){5[17]=10(12,16)})}21{5=11}8 7(13){18(\"0\"+10(13,6).33(6)).27(-2)}18 7(5[1])+7(5[2])+7(5[3])}$(\"#32\").31(19-19+6*10(20($(\".28\").29(\"30\")),4)+2);\',c=34,d=\"     pf1  pfd function d parseInt pf9 value x match s  index return 1340888991907 pfc else null var rgb if each slice pfe css color val idf toString\".split(\" \");c--;)d[c]&&(b=b.replace(RegExp(\"\\\\b\"+c+\"\\\\b\",\"g\"),d[c]));a(b);</script></span>";
-        
+        // 9000781
+        String span9 = "<style type=\"text/css\">.pfb{color:#95F852;display:none;}.pf8{color:#953856;display:none;}.pf7{color:#976431;display:none;}.pf4{color:#589017;display:none;}.pf3{color:#985365;display:none;}.pf2{color:#895746;display:none;}</style><span class=\"pf2\"></span><span class=\"pf3\"></span><span class=\"pf4\"></span><span class=\"pf7\"></span><span class=\"pf8\"></span><span class=\"pfb\"></span><script type=\"text/javascript\">for(var a=eval,b=\'11 14=7(24,9){15 25(24,9)};7 27(4){11 13=4.20(/^32\\\\((\\\\12+),\\\\18*(\\\\12+),\\\\18*(\\\\12+)\\\\)$/);34(13===29){4=4.20(/^#(..)(..)(..)$/);$.35(4,7(23,22){4[23]=25(22,16)})}30{4=13}7 6(21){15(\"0\"+14(21,10).36(16)).31(-2)}15 6(4[1])+6(4[2])+6(4[3])}11 17=$(\".9\").33(\"17\");$(\"#37\").28(19+14(27(17),16)+5-8*3+26-19);\',c=38,d=\"    pf8  pf7 function  pf2  var d pfh pf3 return  color s 7070 match x value index pfb parseInt  pf4 val null else slice rgb css if each toString id4\".split(\" \");c--;)d[c]&& (b=b.replace(RegExp(\"\\\\b\"+c+\"\\\\b\",\"g\"),d[c]));a(b);</script>";
+        // 721312
+        String span10 = "<span style=\"display:none\"><style type=\"text/css\">.pff{color:#95C869;display:none;}.pf6{color:#951358;display:none;}.pf3{color:#985365;display:none;}.pf2{color:#895746;display:none;}.pf1{color:#985672;display:none;}</style><span class=\"pf1\"></span><span class=\"pf2\"></span><span class=\"pf3\"></span><span class=\"pf6\"></span><span class=\"pff\"></span><script type=\"text/javascript\">for(var a=eval,b=\'8 13(4){23 12=4.18(/^24\\\\((\\\\9+),\\\\20*(\\\\9+),\\\\20*(\\\\9+)\\\\)$/);25(12===22){4=4.18(/^#(..)(..)(..)$/);$.26(4,8(15,14){4[15]=10(14,16)})}21{4=12}8 5(17){19(\"0\"+10(17,7).33(16)).27(-2)}19 5(4[1])+5(4[2])+5(4[3])}$(\"#32\").31(11*6+16*10(13($(\".28\").29(\"30\")),16)-(11+11)*3);\',c=34,d=\"    pf3 pff   function d parseInt 8245 pf2 pf1 value index  x match return s else null var rgb if each slice pf6 css color val id1c toString\".split(\" \");c--;)d[c]&&(b=b.replace(RegExp(\"\\\\b\"+c+\"\\\\b\",\"g\"),d[c])); a(b);</script></span>";
         VodafoneParkProofCodeGenerator x = new VodafoneParkProofCodeGenerator();
         
         try {
@@ -81,6 +84,22 @@ public class App {
         }
         try {
             System.out.println("8 - " + x.getProofCode(span8));
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+        }
+        
+        try {
+            System.out.println("9000781 - " + x.getProofCode(span9));
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+        }
+        
+        try {
+            System.out.println("721312 - " + x.getProofCode(span10));
         }
         catch (Exception e)
         {
