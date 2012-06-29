@@ -139,8 +139,35 @@ public class VodafoneParkProofCodeGenerator
         
         rovnice = rovnice.replace(nahrazovanaCast, sum);
         
-        Calculable calc = new ExpressionBuilder(rovnice).build();
-        Double res = calc.calculate();
+        // pokud tam jsou jeste nejaky pismena, tak je najdeme a z kodu vytahneme vyraz, kterym se pocitaji - zatim spolehame, ze je jen jeden
+        String vlozenyVyraz, podpurnaRovnice;
+        Double res;
+        Calculable calc;
+        pattern = Pattern.compile("([a-zA-Z]+\\d*)");
+        matcher = pattern.matcher(rovnice);
+        if (matcher.find())
+        {
+            vlozenyVyraz = matcher.group(1);
+            // najdeme v kodu jeho definici
+            pattern = Pattern.compile("var\\s*" + vlozenyVyraz + "\\s*=\\s*(.*);\\$");
+            matcher = pattern.matcher(b);
+            if (matcher.find())
+            {
+                podpurnaRovnice = matcher.group(1);
+            }
+            else
+                throw new Exception("Nepodarilo se naparsovat vkladany matematicky vyraz");
+            
+            // spocitame
+            calc = new ExpressionBuilder(podpurnaRovnice).build();
+            res = calc.calculate();
+            
+            // nahradime to puvodni vypocitanym
+            rovnice = rovnice.replace(vlozenyVyraz, res.longValue() + "");
+        }
+               
+        calc = new ExpressionBuilder(rovnice).build();
+        res = calc.calculate();
         return res.intValue() + "";
     }
     
