@@ -156,7 +156,7 @@ public class VodafoneParkProofCodeGenerator
                 podpurnaRovnice = matcher.group(1);
             }
             else
-                throw new Exception("Nepodarilo se naparsovat vkladany matematicky vyraz");
+                return "NaN";//throw new Exception("Nepodarilo se naparsovat vkladany matematicky vyraz");
             
             // spocitame
             calc = new ExpressionBuilder(podpurnaRovnice).build();
