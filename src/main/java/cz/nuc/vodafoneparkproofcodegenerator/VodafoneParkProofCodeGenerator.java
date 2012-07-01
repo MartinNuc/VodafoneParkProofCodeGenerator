@@ -148,6 +148,8 @@ public class VodafoneParkProofCodeGenerator
         if (matcher.find())
         {
             vlozenyVyraz = matcher.group(1);
+            if ("parseInt".equals(vlozenyVyraz))
+                return "NaN";
             // najdeme v kodu jeho definici
             pattern = Pattern.compile("var\\s*" + vlozenyVyraz + "\\s*=\\s*(.*);\\$");
             matcher = pattern.matcher(b);
@@ -156,7 +158,7 @@ public class VodafoneParkProofCodeGenerator
                 podpurnaRovnice = matcher.group(1);
             }
             else
-                return "NaN";//throw new Exception("Nepodarilo se naparsovat vkladany matematicky vyraz");
+                return "vf-park";//throw new Exception("Nepodarilo se naparsovat vkladany matematicky vyraz");
             
             // spocitame
             calc = new ExpressionBuilder(podpurnaRovnice).build();
