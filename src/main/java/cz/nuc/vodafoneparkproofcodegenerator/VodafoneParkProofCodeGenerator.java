@@ -161,7 +161,13 @@ public class VodafoneParkProofCodeGenerator
                 return "vf-park";//throw new Exception("Nepodarilo se naparsovat vkladany matematicky vyraz");
             
             // spocitame
+            try {
             calc = new ExpressionBuilder(podpurnaRovnice).build();
+            }
+            catch (Exception ex)
+            {
+                return "vf-park";
+            }
             res = calc.calculate();
             
             // nahradime to puvodni vypocitanym
